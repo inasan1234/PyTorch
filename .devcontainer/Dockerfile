@@ -8,4 +8,5 @@ RUN apt-get update && \
 
 # Install Basic Packages
 RUN pip install numpy && \
-    pip install ipykernel jupyter
+    pip install ipykernel jupyter && \
+    pip install torch
