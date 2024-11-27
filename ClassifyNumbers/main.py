@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
 # 入力サイズ、出力サイズ（分類問題）
-D_i, D_k, D_o = 28*28, 240, 10  # MNIST画像は28x28ピクセル、出力は10クラス（数字0〜9）
+D_i, D_k, D_o = 28*28, 400, 10  # MNIST画像は28x28ピクセル、出力は10クラス（数字0〜9）
 
 # トランスフォーム（前処理） - MNIST画像をテンソルに変換し、正規化
 transform = transforms.Compose([
@@ -41,7 +41,7 @@ criterion = nn.CrossEntropyLoss()  # 分類問題なのでCrossEntropyLoss
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
 # エポック数
-epochs = 25
+epochs = 30
 
 # トレーニングループ
 for epoch in range(epochs):
