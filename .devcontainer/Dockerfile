@@ -10,4 +10,5 @@ RUN apt-get update && \
 RUN pip install numpy && \
     pip install ipykernel jupyter && \
     pip install torch && \
-    pip install torchvision
+    pip install torchvision && \
+    pip install pillow
